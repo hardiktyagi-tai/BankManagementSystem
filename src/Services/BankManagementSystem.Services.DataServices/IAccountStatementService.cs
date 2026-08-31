@@ -18,5 +18,10 @@ namespace BankManagementSystem.Services.DataServices
         /// The closing balance at the end of the requested period.
         /// </summary>
         Task<decimal> GetClosingBalanceAsync(string username, DateTime asOf);
+
+        /// <summary>
+        /// Whether the account was overdrawn at any point in the period.
+        /// </summary>
+        Task<bool> WasOverdrawnAsync(string username, DateTime from, DateTime to);
     }
 }
