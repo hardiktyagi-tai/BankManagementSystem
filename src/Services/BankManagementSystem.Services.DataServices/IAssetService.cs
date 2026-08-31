@@ -16,5 +16,10 @@ namespace BankManagementSystem.Services.DataServices
         Task<AssetViewModel> FindById(int id);
 
         Task PurchaseAssetAsync(PurchaseAssetBindingModel model, string username);
+
+        /// <summary>
+        /// Total market value of every asset the client currently holds.
+        /// </summary>
+        Task<decimal> GetPortfolioValueAsync(string username);
     }
 }
